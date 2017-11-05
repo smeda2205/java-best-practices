@@ -1,4 +1,4 @@
-# Effective Java (A.K.A Java best practices)
+# Effective Java (aka java best practices)
 
 I have built this repo to use it as a reference in certain instances to achieve the best practice principles
 and somehow to improve performance and mainly code quality. It is based on the book "Effective Java, second edition" by Joshua Bloch, 

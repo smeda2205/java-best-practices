@@ -8,8 +8,8 @@ a former software engineer at Sun Microsystems and Google.
 
 ### **1. Creating and Destroying Objects**
 
-1. [Item 1: Consider static factory methods instead of constructors](https://github.com/farruhx/java-best-practices/tree/master/src/item1)
-2. [Item 2: Consider a builder when faced with many constructor parameters](https://github.com/farruhx/java-best-practices/tree/master/src/item2)
+1. [Item 1: Consider static factory methods instead of constructors](https://github.com/farruhx/java-best-practices/tree/master/src/item1).
+2. [Item 2: Consider a builder when faced with many constructor parameters](https://github.com/farruhx/java-best-practices/tree/master/src/item2).
 
  
 

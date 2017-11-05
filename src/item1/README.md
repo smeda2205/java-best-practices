@@ -26,7 +26,21 @@ This redundant specification quickly becomes painful as the length and complexit
 figure out the type parameters for you. This is known as type inference. However, this inference is finally implemented from release 1.7 for the constructors.
 
 
+## Disadvantages
 
+1. The main disadvantage of providing only static factory methods is that classes without public or
+protected constructors cannot be subclassed. The same is true for nonpublic classes returned by public static factories.
+An example [here](https://github.com/farruhx/java-best-practices/tree/master/src/item1/disadvantage_one) shows that B can't extends from A class.
+This encourage the programmer to use the composition instead of inheritance.
+
+2. A second disadvantage of static factory method is that they are not readily distinguishable from the other static methods. They do not stand out
+in API documentation in the way that constructors do, so it can be difficult to figure out how to instantiate a class that provides
+static factory methods instead of constructors.
+
+
+In summary, static factory methods and public constructors both have their uses and it pays to understand their relative merits.
+Static factories are always preferable, so it is better to consider before implementation of constructors.
+ 
 
 
 

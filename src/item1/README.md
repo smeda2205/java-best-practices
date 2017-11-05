@@ -15,6 +15,11 @@ performance. And it enable to implement instance-controlled feature such as sing
 an immutable class to make the guarantee that no two equal instances exist.
 
 3. A third advantage of static factory methods is that, unlike constructors, they can return an object 
-of any subtype of their return type.
+of any subtype of their return type. It enables API to return objects without making their classes public, as an example Java Collections Framework has thirty two 
+convenience implementations of its collections interface, providing unmodifiable collections, synchronized collections, and the like.
+The class of the object returned by a static factory method need not even exist at the time the class containing the method is written.
+As an example of [service provider API]()
+
+
 
 

@@ -10,6 +10,7 @@ a former software engineer at Sun Microsystems and Google.
 
 1. [Item 1: Consider static factory methods instead of constructors](https://github.com/farruhx/java-best-practices/tree/master/src/item1).
 2. [Item 2: Consider a builder when faced with many constructor parameters](https://github.com/farruhx/java-best-practices/tree/master/src/item2).
+3. [Item 3: Enforce the singleton property with a private constructor or an enum type](https://github.com/farruhx/java-best-practices/tree/master/src/item3).
 
  
 

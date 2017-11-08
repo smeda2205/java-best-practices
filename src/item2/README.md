@@ -26,5 +26,34 @@ and gets a builder object, and then the client calls setter like methods on the 
 Finally, the client calls a parameterless build method to generate the object which is immutable.
 Builder is a static member class of the class it builds.
 
+**Builder pattern simulates named optional parameters.**
+
+Like constructors, a builder can impose the invariant on its parameters. The build method can check the invariants.
+It is important the fields must be checked in object fields after copying from the builders fields, and then the build method must throw an Illegal State exception, if any fields are violated against invariants.
+
+Better way to impose the invariants involving multiple parameters is to have setter methods take entire groups of parameters on which some invariants must hold.
+
+## Advantages of Builder pattern
+
+1. Builders can have multiple varargs parameters. However, constructors, like methods can have only one varargs parameters. Because
+builders use separate methods to set each parameter, they can have as many varargs parameters as you like, up to one per setter method.
+
+2. Builder pattern is flexible. A single builder can be used to build multiple objects. The parameters of the builder can be tweaked between object creations to vary the objects.
+The builder can fill in some fields automatically, such as a serial number that automatically increases each time an object is created.
+
+
+## Disadvantages of Builder pattern
+
+1. It is verbose, compared to telescoping constructor pattern. So it should be used only if there are enough parameters, say four or more.
+It is often better to start with a builder in the first place.
+
+2. The cost of creating the builder is unlikely to be noticeable in practice, it could be a problem in some performance critical situations.
+
+
+In summary, the builder pattern is good a choice  when designing classes whose constructors or static factories would have more than a handful of parameters, especially if most of those parameters are optional.
+Client code is much easier to read and write with builders than with the traditional telescoping constructors pattern, and builder are much safer than java beans.
+
+
+
 
 

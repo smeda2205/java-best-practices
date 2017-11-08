@@ -17,6 +17,14 @@ client code when there are many parameters, and harder still to read it.** Most 
 if the client accidentally reverses two such parameters, the compiler won't complain, but the program will misbehave at the runtime.
 
 Another way to solve such a problem when you are faced with many constructor parameters is use the [_Java Beans_](https://github.com/farruhx/java-best-practices/tree/master/src/item2/javabeans_pattern) pattern, in which you call
-parameterless constructor to create the object and then call setter methods to set each required parameter and each optional parameters. However, Java Bean pattern allows inconsistency, mandates mutability.
+parameterless constructor to create the object and then call setter methods to set each required parameter and each optional parameters. However, Java Bean pattern allows inconsistency, mandates mutability. Because construction is split across multiple calls, the class does not have
+an option  of enforcing consistency merely by checking the validity of the constructor parameters. Since it is not possible to make the class immutable with javabeans pattern, it requires added effort on the part of the programmer to ensure thread safety.
+
+Finally and luckily, there is safe and better approach that is [_Builder_](https://github.com/farruhx/java-best-practices/tree/master/src/item2/builder_pattern) pattern which combines the safety of the telescoping constructor pattern
+with the readability od the Java Beans pattern. It works this way: it makes the desired object directly, the client calls a constructor (or static factory) with all of the required parameters
+and gets a builder object, and then the client calls setter like methods on the builder object to set each optional parameters of interest.
+Finally, the client calls a parameterless build method to generate the object which is immutable.
+Builder is a static member class of the class it builds.
+
 
 

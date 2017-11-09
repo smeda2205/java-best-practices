@@ -29,4 +29,12 @@ a `readResolve` method. Otherwise, each time a serialized instance is deserializ
 To prevent this, add this `readResolve` method to the `Elvis` class.
 
 
+Finally, as of 1.5 release, there is a third approach to implementing singletons. Simply make an enum type with one element.
+This approach is preferable, and this approach is functionally equivalent to the public field approach, except that it is more concise, and provides
+the serialization machinery for free, and provides an ironclad guarantee against multiple instances, even in the face of sophisticated serialization or refection attacks.
+
+In short, single-element type is the best way to implement a singleton.
+
+
+
 

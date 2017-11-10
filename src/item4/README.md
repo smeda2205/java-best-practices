@@ -1,4 +1,4 @@
-# Item 3: Enforce noninstantiability with a private constructor
+# Item 4: Enforce noninstantiability with a private constructor
 
 Sometimes, we need to write a class that is just a group of static methods and static fields.
 They can be used to group related methods on primitive values or arrays, for example `java.lang.Math` or

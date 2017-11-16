@@ -23,7 +23,12 @@ Another way to avoid creation of unnecessary object  is using static factory met
 
 In addition, it is also possible to reuse mutable object if you know they wont be modified. Here is a slightly more subtle
 and much more common example of what not to do. It involves in mutable Date objects that are never modified once their values have been computed.
-Here is an example of [`isBabeBoomer`]() which tells whether a person is baby boomer, in other words whether baby was born between 1946 and 1964.
+Here is an example of [`isBabeBoomer`](https://github.com/farruhx/java-best-practices/tree/master/src/item5/babeboomer) which tells whether a person is baby boomer, 
+in other words whether baby was born between 1946 and 1964.
+
+The isBabyBoomer method unnecessarily created new Calendar, TimeZone, and two Date Instances each time is invoked. The [second version](https://github.com/farruhx/java-best-practices/tree/master/src/item5/babeboomer/ImprovedPerson) is much improved and avoids this inefficiency with a static initializer
+
+
 
 
 

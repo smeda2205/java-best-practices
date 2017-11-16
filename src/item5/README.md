@@ -26,7 +26,24 @@ and much more common example of what not to do. It involves in mutable Date obje
 Here is an example of [`isBabeBoomer`](https://github.com/farruhx/java-best-practices/tree/master/src/item5/babeboomer) which tells whether a person is baby boomer, 
 in other words whether baby was born between 1946 and 1964.
 
-The isBabyBoomer method unnecessarily created new Calendar, TimeZone, and two Date Instances each time is invoked. The [second version](https://github.com/farruhx/java-best-practices/tree/master/src/item5/babeboomer/ImprovedPerson) is much improved and avoids this inefficiency with a static initializer
+The isBabyBoomer method unnecessarily created new Calendar, TimeZone, and two Date Instances each time is invoked. The [second version](https://github.com/farruhx/java-best-practices/tree/master/src/item5/babeboomer/ImprovedPerson) is much improved and avoids this inefficiency with a static initializer.
+This version creates Calendar, TimeZone and date instances only one rather than creating them every time when `isBabyMethod` is invoked.
+
+This improved version leads to significant performance gains. On the machine, the original the original version takes 32 000 ms for 10 million invocation, while the improved version takes 130 ms, which is about 250 times faster.
+Beside, the code is more clear.
+
+Learn more about lazy initialization for better performance and the keySet of Map interface for the creation of unnecessary objects.
+There is a new way to create unnecessary objects in release 1.5. It is called autoboxing, and it allows the programmer to mix primitive and boxed primitive types, boxing and unboxing automatically as needed.
+
+Consider the following [example](https://github.com/farruhx/java-best-practices/tree/master/src/item5/calculate). This program works correct but much slower than it should be, due to a one char typographical error.
+The variable sum is declared as a Long instead of a long, which means that the program constructs about Math.pow(2,31) unnecessary objects.
+Changing Long to long reduces the run time from 43 seconds to 6.8 seconds on the machine.
+
+It is clear that **use primitives to boxed primitives and watch out for unintentional autoboxing.**
+
+However, it is not good to be misled by the implication that object creation is expensive. On the contrary, creation and reclamation of small objects whose constructs do little explicit work is cheap specially on modern JVM implementation.
+Creating additional objects to enhance the clarity, simplicity and the power of the program is generally a good thing.
+ 
 
 
 

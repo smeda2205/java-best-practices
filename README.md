@@ -11,7 +11,8 @@ a former software engineer at Sun Microsystems and Google.
 1. [Item 1: Consider static factory methods instead of constructors](https://github.com/farruhx/java-best-practices/tree/master/src/item1).
 2. [Item 2: Consider a builder when faced with many constructor parameters](https://github.com/farruhx/java-best-practices/tree/master/src/item2).
 3. [Item 3: Enforce the singleton property with a private constructor or an enum type](https://github.com/farruhx/java-best-practices/tree/master/src/item3).
-3. [Item 4: Enforce noninstantiability with a private constructor](https://github.com/farruhx/java-best-practices/tree/master/src/item4).
+4. [Item 4: Enforce noninstantiability with a private constructor](https://github.com/farruhx/java-best-practices/tree/master/src/item4).
+5. [Item 5: Avoid creating unnecessary objects](https://github.com/farruhx/java-best-practices/tree/master/src/item5).
 
 
  

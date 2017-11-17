@@ -13,6 +13,7 @@ a former software engineer at Sun Microsystems and Google.
 3. [Item 3: Enforce the singleton property with a private constructor or an enum type](https://github.com/farruhx/java-best-practices/tree/master/src/item3).
 4. [Item 4: Enforce noninstantiability with a private constructor](https://github.com/farruhx/java-best-practices/tree/master/src/item4).
 5. [Item 5: Avoid creating unnecessary objects](https://github.com/farruhx/java-best-practices/tree/master/src/item5).
+6. [Item 6: Eleminate obsolete object references](https://github.com/farruhx/java-best-practices/tree/master/src/item6).
 
 
  

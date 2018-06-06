@@ -1,11 +1,11 @@
 package unittest;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class JUnitTestSampleTest {
     @Before
     public void setUp() throws Exception {
